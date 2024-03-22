@@ -42,17 +42,20 @@ class PokemonDetailView extends HookWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          _buildPokemonTitleAndDate(),
+          _buildPokemonTitle(),
           _buildPokemonImage(),
-          Center(
-            child: _buildFloatingActionButton(),
+          Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Center(
+              child: _buildFloatingActionButton(),
+            ),
           )
         ],
       ),
     );
   }
 
-  Widget _buildPokemonTitleAndDate() {
+  Widget _buildPokemonTitle() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 22),
       child: Column(
@@ -93,7 +96,7 @@ class PokemonDetailView extends HookWidget {
             width: 50,
             height: 50,
 
-            child: const Icon(Icons.save)),
+            child: const Icon(Icons.bookmark,color: Colors.white),),
       ),
     );
   }
